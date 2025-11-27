@@ -17,11 +17,14 @@ options: {}
 schema: {}
 ports:
   "8666/tcp": 8666
-# Or if you want HA to choose random external port: "8080/tcp": null
 
-# environment variables passed into container
 environment:
   PLUGINS_DIR: /data/plugins
   HTTP_PORT: "8666"
+
+# ingress settings
+ingress: true
+ingress_port: 8666
+ingress_panel: true  # show in sidebar ("java-plugins")
 
 image: "ghcr.io/mercurievv/remotejvmjarlauncher"
