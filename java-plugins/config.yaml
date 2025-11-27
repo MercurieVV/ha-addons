@@ -1,5 +1,5 @@
 name: Remote JVM Jar Launcher
-version: "5a691e0"
+version: "893021d"
 slug: java-plugins
 description: "PF4J-based remote JVM launcher with HTTP jar upload endpoint"
 url: "https://github.com/mercurievv/ha-addons"
