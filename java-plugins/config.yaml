@@ -24,4 +24,4 @@ environment:
   PLUGINS_DIR: /data/plugins
   HTTP_PORT: "8666"
 
-image: "ghcr.io/mercurievv/remotejvmjarlauncher:latest"
+image: "ghcr.io/mercurievv/remotejvmjarlauncher:5a691e0"
