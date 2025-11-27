@@ -1,0 +1,27 @@
+name: Remote JVM Jar Launcher
+version: "1.0.0"
+slug: java-plugins
+description: "PF4J-based remote JVM launcher with HTTP jar upload endpoint"
+url: "https://github.com/mercurievv/ha-addons"
+arch:
+  - aarch64
+  - amd64
+# Show in 'Add-on store' UI
+startup: services
+boot: auto
+# map a persistent volume for plugins
+map:
+  - addon_config:rw
+# if your app stores plugins in /data/plugins (from your jib config)
+options: {}
+schema: {}
+ports:
+  "8080/tcp": 8080
+# Or if you want HA to choose random external port: "8080/tcp": null
+
+# environment variables passed into container
+environment:
+  PLUGINS_DIR: /data/plugins
+  HTTP_PORT: "8666"
+
+image: "ghcr.io/mercurievv/remotejvmjarlauncher/{arch}"
