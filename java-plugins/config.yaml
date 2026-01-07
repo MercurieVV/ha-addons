@@ -34,4 +34,4 @@ ingress_stream: true
 ingress_port: 8666
 ingress_panel: true  # show in sidebar ("java-plugins")
 
-image: "ghcr.io/mercurievv/remotejvmjarlauncher"
+image: "ghcr.io/mercurievv/remotejvmjarlauncher:1220da1"
