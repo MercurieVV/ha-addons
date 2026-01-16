@@ -1,5 +1,5 @@
 name: Remote JVM Jar Launcher
-version: "1.0.30"
+version: "1.0.31"
 slug: java-plugins
 description: "PF4J-based remote JVM launcher with HTTP jar upload endpoint"
 url: "https://github.com/mercurievv/ha-addons"
@@ -15,18 +15,17 @@ map:
 # if your app stores plugins in /data/plugins (from your jib config)
 options:
   api_ext_token: ""
-  dotenv_path: "/data/ha-java.env"
 
 schema:
   api_ext_token: str
-  dotenv_path: str
+
 ports:
   "8666/tcp": 8666
   "8667/tcp": 8667  # /api-ext (authenticated)
 
 environment:
   PLUGINS_DIR: /data/plugins
-  DOTENV_PATH: "${dotenv_path}"
+  DOTENV_PATH: "/data/ha-java.env"
   INTERNAL_HTTP_PORT: "8666"
   EXTERNAL_HTTP_PORT: "8667"
   AUTH_TOKEN: "${api_ext_token}"
