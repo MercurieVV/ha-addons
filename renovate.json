@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "automerge": true,
+  "automergeType": "branch",
+  "packageRules": [
+    {
+      "matchPackageNames": ["ghcr.io/mercurievv/remotejvmjarlauncher"],
+      "automerge": true,
+      "automergeType": "branch"
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^java-plugins/config\\.yaml$"],
+      "matchStrings": [
+        "version: \"(?<currentValue>[^\"]+)\""
+      ],
+      "depNameTemplate": "ghcr.io/mercurievv/remotejvmjarlauncher",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "semver"
+    },
+    {
+      "fileMatch": ["^java-plugins/config\\.yaml$"],
+      "matchStrings": [
+        "image: \"ghcr\\.io/mercurievv/remotejvmjarlauncher:(?<currentValue>[^\"]+)\""
+      ],
+      "depNameTemplate": "ghcr.io/mercurievv/remotejvmjarlauncher",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "semver"
+    }
+  ]
+}
