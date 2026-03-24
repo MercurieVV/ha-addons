@@ -22,6 +22,7 @@ schema:
 ports:
   "8666/tcp": 8666
   "8667/tcp": 8667  # /api-ext (authenticated)
+  "8668/tcp": 8668  # plugin needs
 
 environment:
   PLUGINS_DIR: /data/plugins
